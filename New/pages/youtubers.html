@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Educators - CyberSecurity Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>CyberSecurity Hub</h1>
+            <div class="spinner"></div>
+            <p>Loading educators data...</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-shield-alt"></i> CyberSecurity Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="youtubers.html">Educators</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+            </ul>
+        </nav>
+        <!-- IP Scanner Tool -->
+        <div id="ip-scanner" class="scanner-tool">
+            <div class="scanner-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="scanner-result" id="ip-result">Scanning IP...</div>
+        </div>
+    </header>
+
+    <!-- Educators Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1 class="animate__animated animate__fadeIn">Cybersecurity Educators</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Learn from the best in the field through these top cybersecurity YouTube channels</p>
+        </div>
+    </section>
+
+    <!-- Educators Grid -->
+    <section class="educators-grid">
+        <!-- Educator 1 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/networkchuck.jpg" alt="NetworkChuck">
+            </div>
+            <div class="educator-info">
+                <h3>NetworkChuck</h3>
+                <p class="specialty">Network Security, Cloud Computing</p>
+                <p class="description">NetworkChuck provides engaging tutorials on networking, cybersecurity, and ethical hacking, with a focus on practical, hands-on learning.</p>
+                <div class="course-preview">
+                    <h4>Popular Courses:</h4>
+                    <ul>
+                        <li>Free CCNA Course</li>
+                        <li>Ethical Hacking For Beginners</li>
+                        <li>Linux Fundamentals</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/NetworkChuck" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 2 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/davidbombal.jpg" alt="David Bombal">
+            </div>
+            <div class="educator-info">
+                <h3>David Bombal</h3>
+                <p class="specialty">Ethical Hacking, Networking, CCNA</p>
+                <p class="description">David Bombal offers comprehensive tutorials on ethical hacking, networking, and cybersecurity certifications, with in-depth technical explanations.</p>
+                <div class="course-preview">
+                    <h4>Popular Courses:</h4>
+                    <ul>
+                        <li>Complete Ethical Hacking Course</li>
+                        <li>Python for Network Engineers</li>
+                        <li>CCNA Practical Labs</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/DavidBombal" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 3 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/johnhammond.jpg" alt="John Hammond">
+            </div>
+            <div class="educator-info">
+                <h3>John Hammond</h3>
+                <p class="specialty">Malware Analysis, CTF Challenges</p>
+                <p class="description">John Hammond specializes in CTF walkthroughs, malware analysis, and programming for cybersecurity, offering insights into real-world security scenarios.</p>
+                <div class="course-preview">
+                    <h4>Popular Courses:</h4>
+                    <ul>
+                        <li>Malware Analysis Techniques</li>
+                        <li>CTF Challenge Walkthroughs</li>
+                        <li>Practical Python for Security</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/JohnHammond010" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 4 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/hackersploit.jpg" alt="HackerSploit">
+            </div>
+            <div class="educator-info">
+                <h3>HackerSploit</h3>
+                <p class="specialty">Penetration Testing, Kali Linux</p>
+                <p class="description">HackerSploit provides detailed tutorials on penetration testing, Kali Linux tools, and web application security, with a focus on practical methods.</p>
+                <div class="course-preview">
+                    <h4>Popular Courses:</h4>
+                    <ul>
+                        <li>Kali Linux Complete Course</li>
+                        <li>Web Application Penetration Testing</li>
+                        <li>Network Penetration Testing</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/HackerSploit" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 5 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/liveoverflow.jpg" alt="LiveOverflow">
+            </div>
+            <div class="educator-info">
+                <h3>LiveOverflow</h3>
+                <p class="specialty">Vulnerability Research, Binary Exploitation</p>
+                <p class="description">LiveOverflow covers vulnerability research, binary exploitation, and CTF challenges, delving deep into the technical aspects of security research.</p>
+                <div class="course-preview">
+                    <h4>Popular Content:</h4>
+                    <ul>
+                        <li>Binary Exploitation Tutorials</li>
+                        <li>Game Hacking Series</li>
+                        <li>Vulnerability Research Methodology</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/LiveOverflow" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 6 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/ippsec.jpg" alt="IppSec">
+            </div>
+            <div class="educator-info">
+                <h3>IppSec</h3>
+                <p class="specialty">HackTheBox, Advanced Penetration Testing</p>
+                <p class="description">IppSec is known for methodical HackTheBox machine walkthroughs, providing detailed explanations of advanced penetration testing techniques.</p>
+                <div class="course-preview">
+                    <h4>Popular Content:</h4>
+                    <ul>
+                        <li>HackTheBox Walkthroughs</li>
+                        <li>Advanced Penetration Testing Techniques</li>
+                        <li>Active Directory Attacks</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/ippsec" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 7 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/nullbyte.jpg" alt="Null Byte">
+            </div>
+            <div class="educator-info">
+                <h3>Null Byte</h3>
+                <p class="specialty">Ethical Hacking, Wi-Fi Security</p>
+                <p class="description">Null Byte offers tutorials on ethical hacking tools, Wi-Fi security, and social engineering techniques with a focus on practical demonstrations.</p>
+                <div class="course-preview">
+                    <h4>Popular Content:</h4>
+                    <ul>
+                        <li>Wi-Fi Hacking Techniques</li>
+                        <li>Social Engineering Masterclass</li>
+                        <li>Mobile Device Exploitation</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/NullByteWHT" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 8 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/thehackerscorner.jpg" alt="The Cyber Mentor">
+            </div>
+            <div class="educator-info">
+                <h3>The Cyber Mentor</h3>
+                <p class="specialty">Web Application Security, OSCP Preparation</p>
+                <p class="description">TCM provides comprehensive courses on practical ethical hacking, penetration testing, and certification preparation with hands-on demonstrations.</p>
+                <div class="course-preview">
+                    <h4>Popular Courses:</h4>
+                    <ul>
+                        <li>Practical Ethical Hacking</li>
+                        <li>Web Application Penetration Testing</li>
+                        <li>OSCP Preparation Guide</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/TheCyberMentor" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 9 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/computerphile.jpg" alt="Computerphile">
+            </div>
+            <div class="educator-info">
+                <h3>Computerphile</h3>
+                <p class="specialty">Cryptography, Security Concepts</p>
+                <p class="description">Computerphile explores the theoretical aspects of computer security, cryptography, and programming with academic experts and researchers.</p>
+                <div class="course-preview">
+                    <h4>Popular Content:</h4>
+                    <ul>
+                        <li>Cryptography Explained</li>
+                        <li>SQL Injection Deep Dive</li>
+                        <li>How Hackers Attack Systems</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/user/Computerphile" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+
+        <!-- Educator 10 -->
+        <div class="educator-card animate-on-scroll">
+            <div class="educator-image">
+                <img src="../img/educators/codesplain.jpg" alt="Professor Messer">
+            </div>
+            <div class="educator-info">
+                <h3>Professor Messer</h3>
+                <p class="specialty">CompTIA Certification, IT Security</p>
+                <p class="description">Professor Messer provides free, comprehensive training for CompTIA Security+, Network+, and A+ certifications with detailed explanations.</p>
+                <div class="course-preview">
+                    <h4>Popular Courses:</h4>
+                    <ul>
+                        <li>CompTIA Security+ Complete Course</li>
+                        <li>CompTIA Network+ Training</li>
+                        <li>IT Security Fundamentals</li>
+                    </ul>
+                </div>
+                <a href="https://youtube.com/c/professormesser" class="btn" target="_blank">Visit Channel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Educators Section -->
+    <section class="more-educators">
+        <h2>More Cybersecurity Educators</h2>
+        <div class="educators-list">
+            <!-- Educators 11-20 in more compact format -->
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>Seytonic</h3>
+                    <p>Hardware Hacking, Privacy, Security News</p>
+                    <a href="https://youtube.com/c/Seytonic" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>Pwnfunction</h3>
+                    <p>Web Security, Bug Bounty, Animation-based Explanations</p>
+                    <a href="https://youtube.com/c/PwnFunction" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>13Cubed</h3>
+                    <p>Digital Forensics, Incident Response</p>
+                    <a href="https://youtube.com/c/13Cubed" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>Nahamsec</h3>
+                    <p>Bug Bounty Hunting, Web Application Security</p>
+                    <a href="https://youtube.com/c/Nahamsec" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>STÖK</h3>
+                    <p>Bug Bounty, Ethical Hacking Lifestyle</p>
+                    <a href="https://youtube.com/c/STOKfredrik" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>Security Weekly</h3>
+                    <p>Security News, Interviews with Industry Experts</p>
+                    <a href="https://youtube.com/c/SecurityWeekly" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>Black Hat</h3>
+                    <p>Conference Presentations, Cutting-edge Research</p>
+                    <a href="https://youtube.com/c/BlackHatOfficialYT" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>DEFCONConference</h3>
+                    <p>Hacker Conference, Technical Presentations</p>
+                    <a href="https://youtube.com/user/DEFCONConference" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>InsiderPhD</h3>
+                    <p>Bug Bounty for Beginners, Academic Approach</p>
+                    <a href="https://youtube.com/c/InsiderPhD" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+
+            <div class="edu-list-item animate-on-scroll">
+                <div class="edu-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="edu-mini-info">
+                    <h3>Cyberspatial</h3>
+                    <p>Defensive Security, Blue Team Operations</p>
+                    <a href="https://youtube.com/c/Cyberspatial" target="_blank">Visit Channel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CyberSecurity Hub</h3>
+                <p>Your one-stop resource for cybersecurity education and tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="youtubers.html">Educators</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberSecurity Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Additional styling for this page -->
+    <style>
+        .page-banner {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('../img/banner-cyber.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-color);
+            padding: 0 20px;
+        }
+
+        .page-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .page-banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .educators-grid {
+            padding: 80px 5%;
+            background-color: var(--primary-color);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .educator-card {
+            background-color: var(--dark-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .educator-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .educator-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .educator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .educator-card:hover .educator-image img {
+            transform: scale(1.1);
+        }
+
+        .educator-info {
+            padding: 20px;
+        }
+
+        .educator-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .specialty {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            color: #bac8de;
+        }
+
+        .course-preview {
+            background-color: rgba(17, 34, 64, 0.6);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .course-preview h4 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .course-preview ul {
+            padding-left: 20px;
+        }
+
+        .course-preview ul li {
+            margin-bottom: 5px;
+            color: #bac8de;
+            list-style-type: disc;
+        }
+
+        .more-educators {
+            padding: 80px 5%;
+            background-color: var(--dark-bg);
+        }
+
+        .educators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .edu-list-item {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .edu-list-item:hover {
+            transform: translateX(10px);
+        }
+
+        .edu-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .edu-mini-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        .edu-mini-info p {
+            font-size: 0.9rem;
+            color: #bac8de;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .educators-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .educators-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/ip-scanner.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

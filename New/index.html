@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSecurity Hub | By Cyber-Umar</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Initial Loading Animation -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>CyberSecurity Hub</h1>
+            <div class="spinner"></div>
+            <p>Loading secure environment...</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-shield-alt"></i> CyberSecurity Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/youtubers.html">Educators</a></li>
+                <li><a href="pages/tools.html">Tools</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <!-- IP Scanner Tool -->
+        <div id="ip-scanner" class="scanner-tool">
+            <div class="scanner-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="scanner-result" id="ip-result">Scanning IP...</div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Animation -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>Welcome to CyberSecurity Hub | By Cyber-Umar</h1>
+            <p>Your one-stop resource for cybersecurity education, tools, and resources</p>
+            <div class="hero-buttons">
+                <a href="pages/youtubers.html" class="btn">Explore Educators</a>
+                <a href="pages/tools.html" class="btn btn-alt">Discover Tools</a>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="network-animation"></div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <h2>Featured Resources</h2>
+        <div class="card-container">
+            <div class="card animate__animated animate__fadeInUp">
+                <div class="card-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Top Educators</h3>
+                <p>Learn from the best cybersecurity educators on YouTube</p>
+                <a href="pages/youtubers.html" class="card-link">View All</a>
+            </div>
+            <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <div class="card-icon"><i class="fas fa-tools"></i></div>
+                <h3>Security Tools</h3>
+                <p>Access and learn about the most powerful security tools</p>
+                <a href="pages/tools.html" class="card-link">Explore Tools</a>
+            </div>
+            <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Security</h3>
+                <p>Discover how AI is transforming cybersecurity</p>
+                <a href="#ai-section" class="card-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section id="ai-section" class="ai-features">
+        <h2>AI-Powered Security Features</h2>
+        <div class="ai-container">
+            <div class="ai-item">
+                <div class="ai-icon"><i class="fas fa-brain"></i></div>
+                <h3>Threat Detection</h3>
+                <p>Our AI algorithms detect and alert you about potential security threats in real-time</p>
+            </div>
+            <div class="ai-item">
+                <div class="ai-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Risk Assessment</h3>
+                <p>AI-powered tools to evaluate your security posture and identify vulnerabilities</p>
+            </div>
+            <div class="ai-item">
+                <div class="ai-icon"><i class="fas fa-lock"></i></div>
+                <h3>Password Strength</h3>
+                <p>AI-based password strength calculator and recommendations</p>
+            </div>
+            <div class="ai-item">
+                <div class="ai-icon"><i class="fas fa-shield-virus"></i></div>
+                <h3>Malware Detection</h3>
+                <p>Advanced AI systems to identify and neutralize malware</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Tools Preview -->
+    <section class="quick-tools">
+        <h2>Quick Access Tools</h2>
+        <div class="tools-preview">
+            <div class="tool-item">
+                <h3>IP Scanner</h3>
+                <p>Scan and analyze IP addresses</p>
+                <button class="tool-btn" id="ip-scan-btn">Use Tool</button>
+            </div>
+            <div class="tool-item">
+                <h3>Password Generator</h3>
+                <p>Create strong, secure passwords</p>
+                <button class="tool-btn" id="password-gen-btn">Generate</button>
+                <div id="password-result" class="tool-result"></div>
+            </div>
+            <div class="tool-item">
+                <h3>Hash Generator</h3>
+                <p>Generate file or text hashes</p>
+                <input type="text" id="hash-input" placeholder="Enter text to hash">
+                <button class="tool-btn" id="hash-btn">Hash</button>
+                <div id="hash-result" class="tool-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About CyberSecurity Hub</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>CyberSecurity Hub is your comprehensive resource for all things related to cybersecurity. Our mission is to provide accessible, high-quality information and tools to help individuals and organizations enhance their security posture.</p>
+                <p>We've curated content from top cybersecurity educators and compiled a collection of powerful security tools to give you everything you need in one place.</p>
+            </div>
+            <div class="about-image">
+                <img src="img/security-hub.jpg" alt="CyberSecurity Hub">
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Profile Photo Display -->
+    <div id="educator-profile">
+        <img id="profile-photo" src="" alt="Educator Profile Photo">
+    </div>
+    <script>
+        async function fetchProfilePhoto(channelId) {
+            const response = await fetch(`/youtube-profile?channelId=${channelId}`);
+            const data = await response.json();
+            document.getElementById('profile-photo').src = data.profilePhoto;
+        }
+        // Example: Call this function with a channel ID
+        fetchProfilePhoto('YOUR_CHANNEL_ID');
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CyberSecurity Hub</h3>
+                <p>Your one-stop resource for cybersecurity education and tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/youtubers.html">Educators</a></li>
+                    <li><a href="pages/tools.html">Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberSecurity Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/ip-scanner.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

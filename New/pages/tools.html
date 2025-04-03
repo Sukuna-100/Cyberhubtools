@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Tools - CyberSecurity Hub</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-shield-alt"></i> CyberSecurity Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="youtubers.html">Educators</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+            </ul>
+        </nav>
+        <!-- IP Scanner Tool -->
+        <div id="ip-scanner" class="scanner-tool">
+            <div class="scanner-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="scanner-result" id="ip-result">Scanning IP...</div>
+        </div>
+    </header>
+
+    <!-- Tools Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1 class="animate__animated animate__fadeIn">Cybersecurity Tools</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">A collection of powerful cybersecurity tools to enhance your security posture</p>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section class="interactive-tools">
+        <h2>Try Our Interactive Tools</h2>
+        <div class="tools-container">
+            <!-- Tool 1: IP Scanner -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>IP Address Scanner</h3>
+                <p>Identify your current IP address and network information</p>
+                <div class="tool-interface">
+                    <button id="ip-scan-btn" class="tool-btn">Scan My IP</button>
+                    <div id="ip-scan-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 2: Password Generator -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-key"></i></div>
+                <h3>Secure Password Generator</h3>
+                <p>Create strong, randomized passwords for better security</p>
+                <div class="tool-interface">
+                    <div class="tool-controls">
+                        <label for="password-length">Length: <span id="length-value">16</span></label>
+                        <input type="range" id="password-length" min="8" max="32" value="16">
+                        <div class="checkbox-controls">
+                            <label><input type="checkbox" id="use-uppercase" checked> Uppercase</label>
+                            <label><input type="checkbox" id="use-numbers" checked> Numbers</label>
+                            <label><input type="checkbox" id="use-symbols" checked> Symbols</label>
+                        </div>
+                    </div>
+                    <button id="password-gen-btn" class="tool-btn">Generate Password</button>
+                    <div id="password-result" class="tool-result"></div>
+                    <button id="copy-password" class="tool-btn secondary">Copy Password</button>
+                </div>
+            </div>
+
+            <!-- Tool 3: Hash Generator -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-fingerprint"></i></div>
+                <h3>Hash Generator</h3>
+                <p>Generate cryptographic hashes from text input</p>
+                <div class="tool-interface">
+                    <div class="hash-controls">
+                        <select id="hash-algorithm">
+                            <option value="sha256">SHA-256</option>
+                            <option value="md5">MD5</option>
+                            <option value="sha1">SHA-1</option>
+                        </select>
+                        <input type="text" id="hash-input" placeholder="Enter text to hash">
+                    </div>
+                    <button id="hash-btn" class="tool-btn">Generate Hash</button>
+                    <div id="hash-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 4: Password Strength Checker -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Password Strength Analyzer</h3>
+                <p>Check how strong your password is against potential attacks</p>
+                <div class="tool-interface">
+                    <input type="password" id="password-check-input" placeholder="Enter password to analyze">
+                    <button id="password-check-btn" class="tool-btn">Analyze Strength</button>
+                    <div id="password-strength-meter">
+                        <div class="meter-bar">
+                            <div id="strength-indicator" class="meter-fill"></div>
+                        </div>
+                        <div id="strength-text">Password strength will appear here</div>
+                    </div>
+                    <div id="password-suggestions" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 5: DNS Lookup -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-search"></i></div>
+                <h3>DNS Lookup</h3>
+                <p>Look up DNS records for a domain</p>
+                <div class="tool-interface">
+                    <input type="text" id="dns-input" placeholder="Enter domain (e.g., example.com)">
+                    <button id="dns-lookup-btn" class="tool-btn">Lookup DNS</button>
+                    <div id="dns-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 6: Port Scanner Simulation -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-plug"></i></div>
+                <h3>Port Scanner Simulation</h3>
+                <p>Simulate a port scanning operation (educational purposes only)</p>
+                <div class="tool-interface">
+                    <input type="text" id="port-scan-input" placeholder="Enter hostname or IP">
+                    <div class="port-range">
+                        <label>Port range: </label>
+                        <input type="number" id="port-start" value="1" min="1" max="1000">
+                        <span>to</span>
+                        <input type="number" id="port-end" value="100" min="1" max="1000">
+                    </div>
+                    <button id="port-scan-btn" class="tool-btn">Simulate Scan</button>
+                    <div id="port-scan-result" class="tool-result scanning-animation"></div>
+                </div>
+            </div>
+
+            <!-- Tool 6: Base64 Encoder/Decoder -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-exchange-alt"></i></div>
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Convert text to and from Base64 encoding</p>
+                <div class="tool-interface">
+                    <textarea id="base64-input" placeholder="Enter text to encode/decode"></textarea>
+                    <div class="button-group">
+                        <button id="encode-base64" class="tool-btn">Encode</button>
+                        <button id="decode-base64" class="tool-btn">Decode</button>
+                    </div>
+                    <div id="base64-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 7: URL Encoder/Decoder -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-link"></i></div>
+                <h3>URL Encoder/Decoder</h3>
+                <p>Convert text to and from URL-safe format</p>
+                <div class="tool-interface">
+                    <textarea id="url-input" placeholder="Enter text to encode/decode"></textarea>
+                    <div class="button-group">
+                        <button id="encode-url" class="tool-btn">Encode</button>
+                        <button id="decode-url" class="tool-btn">Decode</button>
+                    </div>
+                    <div id="url-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 8: SSL Certificate Checker -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-lock"></i></div>
+                <h3>SSL Certificate Checker</h3>
+                <p>Check SSL certificate status of a website (simulation)</p>
+                <div class="tool-interface">
+                    <input type="text" id="ssl-domain" placeholder="Enter domain (e.g., example.com)">
+                    <button id="check-ssl" class="tool-btn">Check Certificate</button>
+                    <div id="ssl-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 9: Password Pattern Analyzer -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-eye"></i></div>
+                <h3>Password Pattern Analyzer</h3>
+                <p>Analyze password patterns and common substitutions</p>
+                <div class="tool-interface">
+                    <input type="text" id="pattern-input" placeholder="Enter password to analyze patterns">
+                    <button id="analyze-pattern" class="tool-btn">Analyze Patterns</button>
+                    <div id="pattern-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 10: Network Latency Tester -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Network Latency Tester</h3>
+                <p>Test network response times to common services</p>
+                <div class="tool-interface">
+                    <select id="latency-target" class="tool-select">
+                        <option value="google">Google.com</option>
+                        <option value="cloudflare">Cloudflare DNS (1.1.1.1)</option>
+                        <option value="amazon">Amazon.com</option>
+                        <option value="github">GitHub.com</option>
+                    </select>
+                    <button id="test-latency" class="tool-btn">Test Latency</button>
+                    <div id="latency-result" class="tool-result">
+                        <div class="latency-bars"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 11: File Hash Calculator -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>File Hash Calculator</h3>
+                <p>Calculate file hashes (MD5, SHA-1, SHA-256)</p>
+                <div class="tool-interface">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="hash-file-input" class="file-input">
+                        <label for="hash-file-input" class="file-label">
+                            <i class="fas fa-upload"></i> Choose File
+                        </label>
+                        <span id="selected-file-name">No file selected</span>
+                    </div>
+                    <div class="hash-options">
+                        <label><input type="checkbox" id="hash-md5" checked> MD5</label>
+                        <label><input type="checkbox" id="hash-sha1" checked> SHA-1</label>
+                        <label><input type="checkbox" id="hash-sha256" checked> SHA-256</label>
+                    </div>
+                    <button id="calculate-hash" class="tool-btn">Calculate Hashes</button>
+                    <div id="hash-file-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 12: AI Password Strength Analyzer -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI Password Strength Analyzer</h3>
+                <p>Advanced AI-powered password analysis and recommendations</p>
+                <div class="tool-interface">
+                    <input type="text" id="ai-password-input" placeholder="Enter password to analyze">
+                    <button id="analyze-ai-password" class="tool-btn">Analyze with AI</button>
+                    <div class="password-strength-meter">
+                        <div class="meter-bar"></div>
+                        <div class="meter-labels">
+                            <span>Weak</span>
+                            <span>Medium</span>
+                            <span>Strong</span>
+                            <span>Very Strong</span>
+                        </div>
+                    </div>
+                    <div id="ai-password-result" class="tool-result"></div>
+                </div>
+            </div>
+
+            <!-- Tool 13: AI Security Risk Assessment -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>AI Security Risk Assessment</h3>
+                <p>Analyze potential security risks in your system configuration</p>
+                <div class="tool-interface">
+                    <div class="risk-categories">
+                        <label><input type="checkbox" checked value="network"> Network Security</label>
+                        <label><input type="checkbox" checked value="password"> Password Policies</label>
+                        <label><input type="checkbox" checked value="software"> Software Updates</label>
+                        <label><input type="checkbox" checked value="access"> Access Control</label>
+                    </div>
+                    <button id="start-risk-assessment" class="tool-btn">Start Assessment</button>
+                    <div id="risk-assessment-result" class="tool-result">
+                        <div class="risk-summary"></div>
+                        <div class="risk-details"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 14: AI Malware Detection Simulator -->
+            <div class="tool-box animate-on-scroll">
+                <div class="tool-icon"><i class="fas fa-virus-slash"></i></div>
+                <h3>AI Malware Detection Simulator</h3>
+                <p>Simulate AI-powered malware detection and analysis</p>
+                <div class="tool-interface">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="malware-file-input" class="file-input">
+                        <label for="malware-file-input" class="file-label">
+                            <i class="fas fa-upload"></i> Choose File for Analysis
+                        </label>
+                        <span id="malware-file-name">No file selected</span>
+                    </div>
+                    <div class="scan-options">
+                        <label><input type="checkbox" id="deep-scan" checked> Deep Scan</label>
+                        <label><input type="checkbox" id="behavior-analysis" checked> Behavior Analysis</label>
+                        <label><input type="checkbox" id="heuristic-detection" checked> Heuristic Detection</label>
+                    </div>
+                    <button id="start-malware-scan" class="tool-btn">Start Scan</button>
+                    <div id="malware-scan-result" class="tool-result"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Popular Tools Section -->
+    <section class="popular-tools">
+        <h2>Popular Cybersecurity Tools</h2>
+        <div class="tools-grid">
+            <!-- Tool Cards - First Row -->
+            <div class="tool-card animate-on-scroll">
+                <div class="tool-card-header">
+                    <div class="tool-card-icon"><i class="fas fa-dragon"></i></div>
+                    <h3>Wireshark</h3>
+                </div>
+                <div class="tool-card-body">
+                    <p class="tool-category">Network Analysis</p>
+                    <p class="tool-description">The world's foremost network protocol analyzer for network troubleshooting and analysis.</p>
+                    <div class="tool-uses">
+                        <h4>Common Uses:</h4>
+                        <ul>
+                            <li>Network traffic analysis</li>
+                            <li>Protocol inspection</li>
+                            <li>Troubleshooting network issues</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tool-card-footer">
+                    <a href="https://www.wireshark.org/" class="btn" target="_blank">Official Site</a>
+                </div>
+            </div>
+
+            <div class="tool-card animate-on-scroll">
+                <div class="tool-card-header">
+                    <div class="tool-card-icon"><i class="fas fa-skull"></i></div>
+                    <h3>Metasploit</h3>
+                </div>
+                <div class="tool-card-body">
+                    <p class="tool-category">Penetration Testing</p>
+                    <p class="tool-description">Advanced open-source platform for developing, testing, and executing exploit code.</p>
+                    <div class="tool-uses">
+                        <h4>Common Uses:</h4>
+                        <ul>
+                            <li>Vulnerability exploitation</li>
+                            <li>Penetration testing</li>
+                            <li>Security testing automation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tool-card-footer">
+                    <a href="https://www.metasploit.com/" class="btn" target="_blank">Official Site</a>
+                </div>
+            </div>
+
+            <div class="tool-card animate-on-scroll">
+                <div class="tool-card-header">
+                    <div class="tool-card-icon"><i class="fas fa-mask"></i></div>
+                    <h3>Nmap</h3>
+                </div>
+                <div class="tool-card-body">
+                    <p class="tool-category">Network Scanning</p>
+                    <p class="tool-description">Network discovery and security auditing tool for network exploration and security scanning.</p>
+                    <div class="tool-uses">
+                        <h4>Common Uses:</h4>
+                        <ul>
+                            <li>Network inventory</li>
+                            <li>Service upgrade scheduling</li>
+                            <li>Host or service uptime monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tool-card-footer">
+                    <a href="https://nmap.org/" class="btn" target="_blank">Official Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- More tools with shortened descriptions -->
+        <div class="mini-tools-section">
+            <h3>More Essential Tools</h3>
+            <div class="mini-tools-grid">
+                <!-- More tool entries -->
+                <div class="mini-tool">
+                    <h4>Burp Suite <span class="tool-type">Web App Security</span></h4>
+                    <p>Integrated platform for performing security testing of web applications</p>
+                    <a href="https://portswigger.net/burp" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Kali Linux <span class="tool-type">Security OS</span></h4>
+                    <p>Advanced penetration testing Linux distribution used for security audits</p>
+                    <a href="https://www.kali.org/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>John the Ripper <span class="tool-type">Password Cracking</span></h4>
+                    <p>Password security auditing and password recovery tool</p>
+                    <a href="https://www.openwall.com/john/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Aircrack-ng <span class="tool-type">Wireless Security</span></h4>
+                    <p>Network security suite for monitoring and attacking wireless networks</p>
+                    <a href="https://www.aircrack-ng.org/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Hashcat <span class="tool-type">Password Recovery</span></h4>
+                    <p>Advanced CPU/GPU-based password recovery utility</p>
+                    <a href="https://hashcat.net/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Snort <span class="tool-type">Intrusion Detection</span></h4>
+                    <p>Network intrusion prevention and detection system</p>
+                    <a href="https://www.snort.org/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>OWASP ZAP <span class="tool-type">Web App Scanner</span></h4>
+                    <p>The world's most widely used web app scanner for finding vulnerabilities</p>
+                    <a href="https://www.zaproxy.org/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Hydra <span class="tool-type">Password Attacks</span></h4>
+                    <p>Fast and flexible online password cracking tool</p>
+                    <a href="https://github.com/vanhauser-thc/thc-hydra" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Maltego <span class="tool-type">OSINT</span></h4>
+                    <p>Open source intelligence and forensics application</p>
+                    <a href="https://www.maltego.com/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Ghidra <span class="tool-type">Reverse Engineering</span></h4>
+                    <p>Software reverse engineering framework developed by NSA</p>
+                    <a href="https://ghidra-sre.org/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Autopsy <span class="tool-type">Digital Forensics</span></h4>
+                    <p>Digital forensics platform for analyzing hard drives and smartphones</p>
+                    <a href="https://www.autopsy.com/" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>TheHarvester <span class="tool-type">Reconnaissance</span></h4>
+                    <p>Tool for gathering e-mail accounts, usernames and hostnames/subdomains</p>
+                    <a href="https://github.com/laramies/theHarvester" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="mini-tool">
+                    <h4>Nessus <span class="tool-type">Vulnerability Scanner</span></h4>
+                    <p>Comprehensive vulnerability scanning platform</p>
+                    <a href="https://www.tenable.com/products/nessus" target="_blank">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CyberSecurity Hub</h3>
+                <p>Your one-stop resource for cybersecurity education and tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="youtubers.html">Educators</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberSecurity Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Additional styles for tools page -->
+    <style>
+        .page-banner {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('../img/tools-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-color);
+            padding: 0 20px;
+        }
+
+        .page-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .page-banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Interactive Tools Styles */
+        .interactive-tools {
+            padding: 80px 5%;
+            background-color: var(--primary-color);
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tool-box {
+            background-color: var(--dark-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .tool-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--secondary-color);
+            z-index: -1;
+            transition: width 0.3s ease;
+        }
+
+        .tool-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-box:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .tool-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .tool-box p {
+            color: #bac8de;
+            margin-bottom: 20px;
+        }
+
+        .tool-interface {
+            background-color: rgba(17, 34, 64, 0.6);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .tool-controls {
+            margin-bottom: 15px;
+        }
+
+        .tool-controls label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .checkbox-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-controls label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .checkbox-controls input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: var(--primary-color);
+            border: 1px solid var(--secondary-color);
+            color: var(--text-color);
+            border-radius: 5px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 15px;
+            accent-color: var(--secondary-color);
+        }
+
+        .port-range {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .port-range input {
+            width: 80px;
+            margin-bottom: 0;
+        }
+
+        .tool-btn {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .tool-btn:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .tool-btn.secondary {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .tool-btn.secondary:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .tool-result {
+            padding: 15px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            word-break: break-all;
+            min-height: 50px;
+            display: none;
+        }
+
+        /* Password Strength Meter */
+        #password-strength-meter {
+            margin-top: 15px;
+        }
+
+        .meter-bar {
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            height: 100%;
+            width: 0;
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        #strength-text {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        /* Scanning Animation */
+        .scanning-animation {
+            position: relative;
+        }
+
+        .scanning-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.3), transparent);
+            animation: scanning 1.5s infinite linear;
+        }
+
+        @keyframes scanning {
+            100% { left: 100%; }
+        }
+
+        /* Popular Tools Styles */
+        .popular-tools {
+            padding: 80px 5%;
+            background-color: var(--dark-bg);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .tool-card {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tool-card-header {
+            background-color: var(--card-bg);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .tool-card-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .tool-card-header h3 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .tool-card-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .tool-category {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tool-description {
+            color: #bac8de;
+            margin-bottom: 20px;
+        }
+
+        .tool-uses h4 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .tool-uses ul {
+            padding-left: 20px;
+        }
+
+        .tool-uses li {
+            color: #bac8de;
+            margin-bottom: 5px;
+            list-style-type: disc;
+        }
+
+        .tool-card-footer {
+            padding: 20px;
+            background-color: rgba(17, 34, 64, 0.6);
+            text-align: center;
+        }
+
+        /* Mini Tools Section */
+        .mini-tools-section {
+            margin-top: 50px;
+        }
+
+        .mini-tools-section h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .mini-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .mini-tool {
+            background-color: var(--primary-color);
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .mini-tool:hover {
+            transform: translateY(-5px);
+        }
+
+        .mini-tool h4 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tool-type {
+            font-size: 0.7rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .mini-tool p {
+            color: #bac8de;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .mini-tool a {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .mini-tool a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 768px) {
+            .tools-container,
+            .tools-grid,
+            .mini-tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .checkbox-controls {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .port-range {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Additional styles for new tools */
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            resize: vertical;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button-group .tool-btn {
+            flex: 1;
+        }
+
+        #ssl-domain {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .scanning-animation {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .scanning-animation:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            border: 2px solid var(--primary-color);
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .tool-select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .latency-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .latency-bar {
+            height: 20px;
+            background: var(--primary-color);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .latency-bar span {
+            position: absolute;
+            right: -60px;
+            top: 0;
+            font-size: 14px;
+        }
+
+        .file-input-wrapper {
+            margin-bottom: 15px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--primary-color);
+            color: var(--text-color);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .file-label:hover {
+            background: var(--primary-color-dark);
+        }
+
+        #selected-file-name {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .hash-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .hash-options label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .hash-result-item {
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+
+        .hash-result-item strong {
+            color: var(--primary-color);
+        }
+
+        /* AI Tools Styles */
+        .password-strength-meter {
+            margin: 15px 0;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .meter-bar {
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .meter-bar::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            width: 0;
+        }
+
+        .meter-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-color);
+        }
+
+        .risk-categories, .scan-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .risk-categories label, .scan-options label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .risk-summary {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .risk-details {
+            display: grid;
+            gap: 10px;
+        }
+
+        .risk-item {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .risk-item.high { border-left: 4px solid #ff4444; }
+        .risk-item.medium { border-left: 4px solid #ffbb33; }
+        .risk-item.low { border-left: 4px solid #00C851; }
+
+        .scan-progress {
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .scan-progress-bar {
+            height: 4px;
+            background: var(--primary-color);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .threat-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .threat-icon {
+            font-size: 20px;
+        }
+
+        .threat-details {
+            flex: 1;
+        }
+
+        .threat-level {
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .threat-level.high { background: #ff4444; color: white; }
+        .threat-level.medium { background: #ffbb33; color: black; }
+        .threat-level.low { background: #00C851; color: white; }
+    </style>
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/ip-scanner.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/tools.js"></script>
+</body>
+</html>
